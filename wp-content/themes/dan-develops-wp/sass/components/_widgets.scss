@@ -1,0 +1,236 @@
+/****************************
+First, sidebar widget stylings 
+***************************/
+.widget {
+  padding: $spacing;
+  width: 100%;
+  font-family: $headings-face;
+
+  // all lists which could include Navigation, Pages, Categories, Text etc:
+  ul,
+  ol {
+    padding: 0.5em 0 0;
+    margin-bottom: 0;
+
+    li {
+      display: block;
+
+      ul,
+      ol {
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  a {
+    color: $copy;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: $primary;
+    }
+  }
+
+  /* Make sure select elements fit in widgets. */
+  select {
+    width: 100%;
+    height: 2.5em;
+    padding: 10px;
+    font-family: $headings-face;
+    border: 1px solid #ccc;
+  }
+}
+
+.widget-title {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.4em;
+}
+
+/*********************************************************
+## CTA widget
+*********************************************************/
+.widget_cta {
+  @include mq($bp-xl) {
+    margin-top: $spacing * 3;
+  }
+}
+
+/*********************************************************
+## Archive and Categories widgets
+*********************************************************/
+// .widget_archive li {
+// 	color: #7D7D7D;
+// }
+
+// .widget_categories .children {
+// 	padding-top: 0;
+// }
+
+/*********************************************************
+## Pages and Menu widgets
+*********************************************************/
+.widget_pages,
+.widget_nav_menu {
+  li {
+    &:before {
+      content: "\002192";
+      padding-right: 0.5em;
+    }
+  }
+}
+
+/* child pages or sub menus */
+// .widget_pages .children,
+// .widget_nav_menu .sub-menu {
+// 	padding-top: 0;
+// 	padding-bottom: .5em;
+// }
+
+/*********************************************************
+## Search widget
+*********************************************************/
+.widget_search .search-submit {
+  display: none;
+}
+
+.widget_search input[type="search"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5em 1em;
+  border: 1px solid #c3c3c3;
+  border-radius: 0;
+}
+
+/*********************************************************
+## Calendar widget
+*********************************************************/
+// .widget_calendar {
+// 	font-weight: 400;
+
+// 	caption {
+// 		padding: .5em 0;
+// 		font-size: 1em;
+// 		font-weight: 500;
+// 		text-align: left;
+// 	}
+
+// 	thead {
+// 		background: transparent;
+// 		color: black;
+
+// 		th {
+// 			border-bottom-width: 2px;
+// 		}
+// 	}
+
+// 	td {
+// 		padding: .2em;
+// 		font-size: .8em;
+// 		text-align: center;
+// 		background: white;
+// 		border: 1px solid hsl(0, 0%, 80%);
+// 	}
+
+// 	th {
+// 		border: none;
+// 		text-align: center;
+// 	}
+
+// 	.pad {
+// 		background: #eaeaea;
+// 	}
+
+// 	a {
+// 		font-weight: 900;
+// 		text-decoration: none;
+// 	}
+
+// }
+
+/*********************************************************
+## Text widget
+*********************************************************/
+.textwidget {
+  font-size: 80%;
+  line-height: 1.3em;
+}
+
+/****************************
+Footer widget stylings 
+***************************/
+
+// .footer-widgets {
+// 	// display: flex;
+// 	// flex-direction: column;
+// 	margin: 0;
+// 	padding: 1em 0 0;
+// 	background-color: $color__header;
+
+// 	@include mq($bp-s) {
+// 		padding: 2em 1em 0;
+// 	}
+
+// 	@include mq($bp-l) {
+//     padding: 2em 6em 0;
+// 	}
+
+// 	.widget {
+// 		font-family: $font__body;
+// 		flex: 1;
+// 		margin: 0 1em 1em;
+
+// 		ul {
+// 			margin-left: 1em;
+// 		}
+// 	}
+
+// 	.widget,
+// 	.widget-title,
+// 	.widget a,
+// 	.widget_calendar thead,
+// 	.rss-date,
+// 	.widget_rss cite {
+// 		color: white;
+// 	}
+
+// 	.widget_calendar td {
+// 		color: black;
+// 	}
+
+// 	.widget_calendar a {
+// 		color: $color__action;
+// 	}
+
+// 	.widget:last-of-type {
+// 		margin-bottom: 0;
+// 	}
+
+// 	@include mq($bp-m) {
+// 		/* Use flex to create a responsive layout */
+// 		display: flex;
+// 		flex-direction: row;
+// 		flex-wrap: wrap;
+// 		justify-content: space-around;
+
+// 		/* If only one widget is displayed, make it full width. */
+// 		.widget:only-of-type {
+// 			width: 100%;
+// 		}
+
+// 		/* If 2 or 3 widgets are displayed, make the second one twice as wide. */
+// 		.widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
+// 			flex: 2;
+// 		}
+
+// 		/* If 4 or more widgets are displayed, show three across when available. */
+// 		.widget:nth-last-child(n+4),
+// 		.widget:nth-last-child(n+4) ~ .widget {
+// 			width: 30%;
+// 			flex: 1 1 30%;
+// 		}
+
+// 	}
+
+// }

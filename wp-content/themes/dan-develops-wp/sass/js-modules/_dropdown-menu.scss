@@ -1,0 +1,61 @@
+// functionality
+.sub-menu {
+  @include hide-visually("hide");
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  &.sub-menu--active {
+    @include hide-visually("unhide");
+    opacity: 1;
+  }
+}
+
+.sub-menu--active {
+  + .indicator {
+    display: none !important;
+  }
+}
+
+.is-visible-sub-menu .site-header {
+  overflow: visible;
+}
+
+// styling
+.menu--main .sub-menu {
+  text-align: center;
+
+  li {
+    padding: 0 !important;
+    font-size: 87.5%;
+
+    a {
+      padding: $spacing/6 0;
+    }
+  }
+
+  @include mq($bp-menu) {
+    position: absolute;
+    z-index: 1001;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1em;
+    background: $white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+
+    li {
+      display: block;
+
+      a {
+        white-space: nowrap;
+        padding: $spacing/4 $spacing/2;
+        transition: background-color 0.3s, color 0.3s;
+        line-height: 1;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

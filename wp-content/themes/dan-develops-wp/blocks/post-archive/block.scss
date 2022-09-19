@@ -1,0 +1,73 @@
+.post-preview {
+  background-color: rgba($white, 0.6);
+  position: relative;
+  margin-bottom: $spacing;
+  margin-left: 1em;
+  width: 100%;
+  box-shadow: 2px 2px 4px 1px rgba(174, 174, 174, 0.5);
+}
+
+.post-preview__image {
+  z-index: 1;
+  max-width: 400px;
+
+  a {
+    display: block;
+    position: relative;
+    height: 0;
+    padding-bottom: 100%;
+
+    img {
+      display: block;
+      margin-bottom: 0;
+      position: absolute;
+      top: -1em;
+      left: -1em;
+      box-shadow: 2px 2px 4px 1px rgba(174, 174, 174, 0.5);
+    }
+  }
+}
+
+.post-preview__content {
+  min-height: 100%;
+  width: 100%;
+  padding: 0 1.5em 1.5em;
+}
+
+.post__header {
+  .post__title {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    font-size: em(32);
+    font-weight: 500;
+    a {
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+}
+
+.post__excerpt {
+  a {
+    color: $primary;
+  }
+}
+
+// breakpoints
+@include mq(700px) {
+  .post-preview {
+    display: flex;
+  }
+
+  .post-preview__image {
+    padding-bottom: 0;
+    height: auto;
+    width: 35%;
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .post-preview__content {
+    padding-top: 1.5em;
+  }
+}

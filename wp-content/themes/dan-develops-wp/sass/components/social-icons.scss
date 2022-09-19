@@ -1,0 +1,12 @@
+.social-icons {
+  a {
+    text-decoration: none;
+    @include links($copy);
+  }
+
+  i {
+    padding-right: 0.5em;
+    font-size: 1.4em;
+    line-height: 0;
+  }
+}

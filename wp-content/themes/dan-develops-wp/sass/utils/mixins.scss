@@ -1,0 +1,130 @@
+// Center block
+@mixin center-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*********************************************************
+## CSS Grid auto layout with Flexbox fallback for IE
+*********************************************************/
+// You can generate similar code with this handy tool https://shadeed.github.io/grid-to-flex/
+@mixin gridAuto() {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1em;
+
+  // target all direct children (grid items)
+  > * {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  @media (min-width: 600px) {
+    > * {
+      width: calc((99% / #{2}) - 1em);
+      flex: 0 0 calc((99% / #{2}) - 1em);
+    }
+  }
+
+  @media (min-width: 900px) {
+    > * {
+      width: calc((99% / #{3}) - 1em);
+      flex: 0 0 calc((99% / #{3}) - 1em);
+    }
+  }
+
+  // Override or undo all the flexbox stuff.
+  // *note that IE does support some of CSS Grid but doesn't support the @supports function,
+  // so this does what we need!
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-left: 0;
+
+    > * {
+      width: auto;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+// Now just add this mixin to your container element for the grid:
+// .wrapper {
+//   @include gridAuto();
+// }
+
+/*********************************************************
+## Links
+*********************************************************/
+@mixin links($color: $color__action, $adjust: darken, $percent: 15%) {
+  text-decoration: none;
+  color: $color;
+  transition: color 0.3s;
+
+  &:hover {
+    @if $adjust == lighten {
+      color: lighten($color, $percent);
+    } @else {
+      color: darken($color, $percent);
+    }
+  }
+}
+
+// -------------------------------------------------------
+// Media Queries
+// -------------------------------------------------------
+@mixin mq($media-min) {
+  @media screen and (min-width: $media-min) {
+    @content;
+  }
+}
+
+@mixin mq-max($media-max) {
+  @media screen and (max-width: $media-max) {
+    @content;
+  }
+}
+
+@mixin mq-min-max($media-min, $media-max) {
+  @media screen and (min-width: $media-min) and (max-width: $media-max) {
+    @content;
+  }
+}
+
+// -------------------------------------------------------
+// Hide Visually used for menu
+// -------------------------------------------------------
+@mixin hide-visually($toggle: "hide") {
+  @if not index("hide" "unhide", $toggle) {
+    @error "`#{$toggle}` is not a valid value for the `$toggle` argument in " +
+           "the `hide-visually` mixin. Must be either `hide` or `unhide`.";
+  } @else if $toggle == "hide" {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: circle(1% at 1% 1%);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  } @else if $toggle == "unhide" {
+    clip: auto;
+    clip-path: none;
+    height: auto;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+}
+
+// -------------------------------------------------------
+// Image background
+// -------------------------------------------------------
+@mixin image-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}

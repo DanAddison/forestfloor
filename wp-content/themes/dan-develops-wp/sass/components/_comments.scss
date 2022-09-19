@@ -1,0 +1,74 @@
+.comments-area {
+  padding: 1em 0;
+}
+
+/*********************************************************
+## Actual comments
+*********************************************************/
+.comment-list {
+  margin-left: 0;
+  margin-bottom: $spacing * 2;
+
+  @include mq($bp-l) {
+    margin-left: 2em;
+  }
+}
+
+.comment .comment-body {
+  .comment-meta {
+    .comment-author {
+      a {
+        font-family: $headings-face;
+        font-size: 1.2em;
+      }
+    }
+
+    .comment-metadata {
+      font-weight: bold;
+      font-size: 90%;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .comment-content {
+    p {
+      margin-bottom: 0.5em;
+      font-size: em(18);
+    }
+
+    a {
+      word-wrap: break-word;
+    }
+  }
+
+  .reply {
+    font-family: $headings-face;
+    margin-bottom: 2em;
+  }
+}
+
+/*********************************************************
+## Forn for adding new comments
+*********************************************************/
+.comment-form {
+  max-width: $bp-l;
+
+  @include mq($bp-l) {
+    margin-left: 2em;
+  }
+
+  .comment-notes {
+    color: $grey-dark;
+  }
+
+  p {
+    font-size: em(18);
+  }
+  input,
+  textarea {
+    margin-bottom: 0;
+  }
+}

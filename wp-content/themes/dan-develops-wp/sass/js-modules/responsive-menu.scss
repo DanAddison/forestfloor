@@ -1,0 +1,53 @@
+// functionality only - see menus and site-header for styling
+
+.site-header .row {
+  position: inherit;
+}
+
+.main-nav {
+  @include hide-visually("hide");
+  opacity: 0;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+
+  .is-visible-menu & {
+    @include hide-visually("unhide");
+    opacity: 1;
+    display: block;
+    position: absolute;
+    z-index: 900;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba($canvas-dark, 0.95);
+    overflow-y: scroll;
+  }
+
+  @include mq($bp-menu) {
+    @include hide-visually("unhide");
+    opacity: 1;
+  }
+}
+
+.is-visible-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  .cookies-policy {
+    display: none !important;
+  }
+}
+
+.menu-button {
+  outline: none;
+  position: relative;
+  z-index: 1000;
+
+  @include mq($bp-menu) {
+    display: none !important;
+  }
+}

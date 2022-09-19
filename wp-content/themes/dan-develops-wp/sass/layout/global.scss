@@ -1,0 +1,75 @@
+body {
+  max-width: 100%;
+  overflow-x: hidden; // essential to avoid horizontal scrollbar when a child element is 100vw but the browser doesn't account for the vertical scrollbar width
+}
+
+main.main-content {
+  padding-bottom: 2em;
+  min-height: calc(100vh - 200px);
+}
+
+main.main-content > * {
+  &:first-child:not(.alignfull):not(.block-hero-image) {
+    margin-top: 4rem;
+  }
+}
+
+main.main-content > *:not(.alignwide):not(.alignfull) {
+  @include center-block;
+  width: 95%;
+  max-width: $bp-3;
+}
+
+.hidden {
+  display: none;
+}
+
+/*********************************************************
+## Clearings
+*********************************************************/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  @extend %cf;
+}
+
+/*********************************************************
+## Alignments
+*********************************************************/
+/* this is mostly for stuff the user puts in the WYSIWYG editor on back end -
+these classes are added to the content when they choose its alignment:
+*/
+.alignleft {
+  display: block;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: block;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  @include center-block;
+}
+
+.alignwide {
+  @include center-block;
+  width: 100%;
+  max-width: $bp-4;
+}
+
+.alignfull {
+  @include center-block;
+  width: 100%;
+}

@@ -1,0 +1,286 @@
+// Based on Skeleton but without Grid and some other bits
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+*/
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 100%;
+}
+body {
+  font-family: $copy-face;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $copy;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4 {
+  font-family: $headings-face;
+  font-weight: $headings-weight;
+  line-height: 1.2;
+  margin-top: 1.25em;
+  margin-bottom: 0.75em;
+}
+
+h1 {
+  font-size: 2em; // 32px
+
+  @include mq($bp-2) {
+    font-size: 2.5em; // 40px
+  }
+
+  @include mq($bp-3) {
+    font-size: 3em; //48
+  }
+}
+
+h2 {
+  font-size: 1.625em; // 26
+
+  @include mq($bp-2) {
+    font-size: 2em; //32
+  }
+
+  @include mq($bp-3) {
+    font-size: 2.25em; //36
+  }
+}
+
+h3 {
+  font-size: 1.375em; // 22
+
+  @include mq($bp-2) {
+    font-size: 1.5em; //24
+  }
+
+  @include mq($bp-3) {
+    font-size: 1.75em; // 28
+  }
+}
+
+h4 {
+  font-size: 1.125em; //18
+
+  @include mq($bp-2) {
+    font-size: 1.25em; //20
+  }
+
+  @include mq($bp-3) {
+    font-size: 1.375em; //22
+  }
+}
+
+p {
+  font-size: 1em;
+  margin-top: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mq($bp-2) {
+    font-size: 1em; //16px
+  }
+
+  @include mq($bp-3) {
+    font-size: en(18); //18px
+  }
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: $grey-darkest;
+
+  // &:visited {
+  //   color: $color__link-visited;
+  // }
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: $black;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: $white;
+  border-radius: 4px;
+  border: 1px solid $black;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: $white;
+  // background-color: $black; // this will affect hamburger
+  border-color: $white;
+}
+
+/*********************************************************
+## Forms
+*********************************************************/
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: $copy;
+  border: 1px solid $copy;
+  border-radius: 3px;
+  padding: 3px;
+
+  &:focus {
+    color: $primary;
+  }
+}
+
+select {
+  border: 1px solid $copy;
+}
+
+textarea {
+  width: 100%;
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: disc inside;
+}
+ol {
+  list-style: decimal inside;
+}
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5em 0 1.5em 3em;
+  font-size: 90%;
+}
+li {
+  margin-bottom: 1em;
+}
+
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: 0.2em 0.5em;
+  margin: 0 0.2em;
+  font-size: 90%;
+  white-space: nowrap;
+  background: $grey;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+pre > code {
+  display: block;
+  padding: 1em 1.5em;
+  white-space: pre;
+}
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid $grey;
+}
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 1em;
+}
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5em;
+}
+pre,
+blockquote,
+dl,
+figure,
+table,
+ul,
+ol,
+form {
+  margin-bottom: 2.5em;
+}
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */

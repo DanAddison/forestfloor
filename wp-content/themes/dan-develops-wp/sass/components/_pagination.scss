@@ -1,0 +1,19 @@
+.pagination {
+  text-align: center;
+  font-size: em(18);
+  font-weight: 500;
+
+  .page-numbers {
+    padding: 0.5em 0.5em;
+    color: $copy;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
+
+  .page-numbers.current {
+    color: $primary;
+  }
+}

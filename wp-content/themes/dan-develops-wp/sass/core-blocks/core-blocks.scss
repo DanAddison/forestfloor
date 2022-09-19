@@ -1,0 +1,168 @@
+/*********************************************************
+## Custom font sizing
+*********************************************************/
+p.has-small-font-size {
+  font-size: em(14);
+}
+
+p.has-regular-font-size {
+  font-size: em(16);
+}
+
+p.has-large-font-size {
+  font-size: em(18);
+
+  // @include mq($bp-xl) {
+  //   font-size: em(20);
+  // }
+}
+
+/*********************************************************
+## Columns
+*********************************************************/
+.wp-block-columns {
+  width: 95%;
+  .wp-block-column {
+    margin-bottom: 2em;
+  }
+}
+
+/*********************************************************
+## Quote and Pullquote blocks 
+*********************************************************/
+.wp-block-quote,
+.wp-block-quote.is-style-large {
+  padding: 0 2em;
+  border-left: 6px solid $primary;
+  margin: 2em 0;
+
+  @include mq($bp-3) {
+    margin-right: 5em;
+  }
+
+  p {
+    font-style: normal;
+    line-height: 1.45;
+  }
+}
+
+.wp-block-quote {
+  p {
+    font-size: 1.25em;
+  }
+}
+
+/*********************************************************
+## Media+Text block
+*********************************************************/
+.wp-block-media-text {
+  .wp-block-media-text__content {
+    padding: 0;
+    margin-bottom: 1em;
+  }
+
+  .wp-block-media-text__media {
+    margin-bottom: 1em;
+  }
+
+  @include mq(600px) {
+    .wp-block-media-text__content {
+      padding: 0 $spacing;
+      margin-bottom: 0;
+    }
+
+    .wp-block-media-text__media {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*********************************************************
+## image block
+*********************************************************/
+.wp-block-image {
+  img {
+    display: block;
+  }
+}
+
+/*********************************************************
+## Cover-image block
+*********************************************************/
+// .wp-block-cover {
+
+// }
+
+/*********************************************************
+## Embed blocks
+*********************************************************/
+figure {
+  margin: 0;
+}
+
+/*********************************************************
+## Table block
+*********************************************************/
+.wp-block-table {
+  display: table;
+
+  &.is-style-regular td {
+    border: 1px solid $grey-lightest;
+  }
+}
+
+.wp-block-table th {
+  padding: 4px 4px;
+  text-align: left;
+}
+
+.wp-block-table td {
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+/*********************************************************
+## Separator block
+*********************************************************/
+.wp-block-separator {
+  margin: 2em auto;
+
+  @include mq($bp-2) {
+    margin: 4em auto;
+  }
+
+  &.is-style-default {
+    max-width: 300px;
+  }
+}
+
+/*********************************************************
+## Spacer block (extended options in editor.js)
+*********************************************************/
+.wp-block-spacer {
+  &.is-style-responsive-small {
+    height: 2em !important;
+  }
+
+  &.is-style-responsive-medium {
+    height: 4em !important;
+  }
+
+  &.is-style-responsive-large {
+    height: 6em !important;
+  }
+
+  @include mq($bp-3) {
+    &.is-style-responsive-small {
+      height: 4em !important;
+    }
+
+    &.is-style-responsive-medium {
+      height: 6em !important;
+    }
+
+    &.is-style-responsive-large {
+      height: 10em !important;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.site-header {
+  background-color: $canvas-dark;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.header__inner {
+  @include center-block;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-branding {
+  align-self: flex-end;
+  max-width: 300px;
+  margin-bottom: -1em;
+  padding-right: $spacing;
+
+  img {
+    margin-bottom: 0;
+  }
+
+  .site-title {
+    // display: none;
+    margin: 0;
+    font-size: em(32);
+    text-align: center;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+.main-nav {
+  display: block;
+}
+
+button.menu-button {
+  text-align: right;
+  margin-bottom: -8px;
+  font-size: 0.8em;
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: $white;
+  }
+}

@@ -1,0 +1,63 @@
+img {
+  height: auto; /* Make sure images are scaled correctly. */
+  max-width: 100%; /* Adhere to container width. */
+}
+
+@include mq($bp-1) {
+  img.alignleft,
+  img.alignright {
+    max-width: 50%;
+  }
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+  display: inline-block;
+}
+
+.video-responsive {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  width: calc(100% - 1rem);
+  margin-left: auto;
+  margin-right: auto;
+
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+/*********************************************************
+## captions
+*********************************************************/
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+
+  img[class*="wp-image-"] {
+    @include center-block;
+  }
+
+  .wp-caption-text {
+    margin: 0.8075em 0;
+  }
+}
+
+.wp-caption-text {
+  text-align: center;
+}

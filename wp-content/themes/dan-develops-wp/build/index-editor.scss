@@ -1,0 +1,9 @@
+// frontend styles are all included
+@import '../sass/index.scss';
+@import '../blocks/**/block.scss';
+
+// editor-only styles
+@import '../sass/editor-only.scss';
+@import '../blocks/**/editor.scss';
+
+//DON'T ADD CODE HERE. THIS FILE IS NOT WATCHED FOR CHANGES.

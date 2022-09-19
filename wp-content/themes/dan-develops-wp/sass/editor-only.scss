@@ -1,0 +1,40 @@
+/*********************************************************
+## General editor styles
+*********************************************************/
+.editor-styles-wrapper {
+
+	// remove emphasis from the page title since this is not displayed on front end
+	.editor-post-title {
+		opacity: 0.5;
+		margin-left: 1em;// otherwise cursor invisible no indication you can edit title
+	}
+
+	// increase overall editor width
+	.is-root-container.block-editor-block-list__layout {
+		max-width: $container !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	// font family
+	.wp-block {
+		font-family: $body-font-family;
+	}
+
+	// identify reusable blocks in the editor
+	.is-reusable {
+		border: 1px dotted #aaa;
+
+		&:before {
+			content: "REUSABLE";
+			bottom: 100%;
+			display: block;
+			padding: 4px 10px;
+			background: #eee;
+			color: #777;
+			font-weight: bold;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+}

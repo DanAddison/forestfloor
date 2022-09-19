@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    Sizes
+\*------------------------------------*/
+$bp-1: 500px;
+$bp-2: 700px;
+$bp-3: 900px;
+$bp-4: 1100px;
+$bp-5: 1300px;
+$bp-6: 1500px;
+$bp-7: 1700px;
+
+$bp-menu: $bp-3;
+
+// spacing
+$spacing: 2em;
+
+/*------------------------------------*\
+    Font Variables
+\*------------------------------------*/
+$copy-face: "raleway", sans-serif;
+$headings-face: "Montserrat", "Lucida Grande", sans-serif;
+$headings-weight: normal;
+
+/*------------------------------------*\
+    Colours - some dan-develops-wp defaults
+\*------------------------------------*/
+$white: #fff;
+$grey-lightest: #dfdfdf;
+$grey-light: #cbcbcb;
+$grey: #aeaeae;
+$grey-dark: #7b7b7b;
+$grey-darkest: #3f3f3f;
+$black: #000;
+
+$copy: #464646;
+
+$primary: #53c9c8;
+$secondary: #7a53c9;
+
+// Backgrounds
+$canvas-light: #f2f2f2;
+$canvas-medium: $grey-light;
+$canvas-dark: $grey-darkest;
+
+/*------------------------------------*\
+    Gutenberg color options
+\*------------------------------------*/
+// -- see editor-color-palette in gutenberg-settings.php
+$colors: (
+  white: $white,
+  black: $black,
+  grey: $grey,
+  primary: $primary,
+);
+
+@each $name, $color in $colors {
+  .has-#{$name}-color {
+    color: $color;
+  }
+
+  .has-#{$name}-background-color {
+    background-color: $color;
+  }
+}
