@@ -1,5 +1,5 @@
 var gulp = require("gulp"),
-	sass = require("gulp-sass"),
+	sass = require("gulp-sass")(require('sass')),
 	sassGlob = require("gulp-sass-glob"),
 	postcss = require("gulp-postcss"),
 	autoprefixer = require("autoprefixer"),
@@ -14,7 +14,7 @@ const sassOpts = { outputStyle: 'compressed', errLogToConsole: true };
 // paths
 var paths = {
 	frontendStyles: {
-		watch: [
+		watchDirs: [
 			"../sass/**/*",
 			"../blocks/**/block.scss"
 		],
@@ -22,7 +22,7 @@ var paths = {
 		dest: "./gulp-output"
 	},
 	editorStyles: {
-		watch: [
+		watchDirs: [
 			"../sass/editor-only.scss",
 			"../blocks/**/editor.scss"
 		],
@@ -34,7 +34,7 @@ var paths = {
 		dest: "./gulp-output"
 	},
 	php: {
-		watch: [
+		watchDirs: [
 			"../*.php",
 			"../blocks/**/*.php",
 			"../functions/**/*",
@@ -76,7 +76,7 @@ function compileSass(srcFile, outputFilename) {
 }
 
 function compileFrontendSass() {
-	return compileSass(frontendStyles.src, 'frontend.build.css');
+	return compileSass(paths.frontendStyles.src, 'frontend.build.css');
 }
 
 function compileEditorSass() {
@@ -102,14 +102,14 @@ gulp.task('editorCss', () => {
 // watch task
 function watch() {
 	browserSync.init({
-		proxy: "dan-develops-wp.local",
+		proxy: "localhost:10005",
 		notify: false
 	});
 
-	gulp.watch(paths.php.watch).on("change", browserSync.reload);
-	gulp.watch(paths.frontendStyles.src, gulp.series('frontendCss'));
-	gulp.watch(paths.editorStyles.src, gulp.series('editorCss'));
+	gulp.watch(paths.php.watchDirs).on("change", browserSync.reload);
+	gulp.watch(paths.frontendStyles.watchDirs, gulp.series('frontendCss'));
+	gulp.watch(paths.editorStyles.watchDirs, gulp.series('editorCss'));
 	gulp.watch(paths.scripts.src, gulp.series('scripts'));
 }
 
-gulp.task('default', gulp.series('watch'));
+gulp.task('default', gulp.series(watch));

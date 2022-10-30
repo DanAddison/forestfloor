@@ -48,7 +48,7 @@
 
       a {
         white-space: nowrap;
-        padding: $spacing/4 $spacing/2;
+        padding: calc($spacing / 4) calc($spacing / 2);
         transition: background-color 0.3s, color 0.3s;
         line-height: 1;
 

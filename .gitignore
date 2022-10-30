@@ -48,9 +48,6 @@ wp-content/themes/*
 # ignore node dependency directories (wherever they are)
 node_modules/
 
-# ignore package-lock file (wherever it is)
-package-lock.json
-
 # ignore OS generated files
 ehthumbs.db
 Thumbs.db
