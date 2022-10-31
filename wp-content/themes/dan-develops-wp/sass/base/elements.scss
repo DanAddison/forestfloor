@@ -34,7 +34,6 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: $copy;
-  background-color: red;
 }
 
 /* Typography
@@ -51,55 +50,55 @@ h4 {
 }
 
 h1 {
-  font-size: 2em; // 32px
+  font-size: 2rem; // 32px
 
   @include mq($bp-2) {
-    font-size: 2.5em; // 40px
+    font-size: 2.5rem; // 40px
   }
 
   @include mq($bp-3) {
-    font-size: 3em; //48
+    font-size: 3rem; //48
   }
 }
 
 h2 {
-  font-size: 1.625em; // 26
+  font-size: 1.625rem; // 26
 
   @include mq($bp-2) {
-    font-size: 2em; //32
+    font-size: 2rem; //32
   }
 
   @include mq($bp-3) {
-    font-size: 2.25em; //36
+    font-size: 2.25rem; //36
   }
 }
 
 h3 {
-  font-size: 1.375em; // 22
+  font-size: 1.375rem; // 22
 
   @include mq($bp-2) {
-    font-size: 1.5em; //24
+    font-size: 1.5rem; //24
   }
 
   @include mq($bp-3) {
-    font-size: 1.75em; // 28
+    font-size: 1.75rem; // 28
   }
 }
 
 h4 {
-  font-size: 1.125em; //18
+  font-size: 1.125rem; //18
 
   @include mq($bp-2) {
-    font-size: 1.25em; //20
+    font-size: 1.25rem; //20
   }
 
   @include mq($bp-3) {
-    font-size: 1.375em; //22
+    font-size: 1.375rem; //22
   }
 }
 
 p {
-  font-size: 1em;
+  font-size: 1rem;
   margin-top: 0;
 
   &:last-child {
@@ -107,11 +106,11 @@ p {
   }
 
   @include mq($bp-2) {
-    font-size: 1em; //16px
+    font-size: 1rem; //16px
   }
 
   @include mq($bp-3) {
-    font-size: en(18); //18px
+    font-size: 1.125rem; //18px
   }
 }
 
