@@ -54,11 +54,11 @@ $colors: (
 );
 
 @each $name, $color in $colors {
-  .has-#{$name}-color {
+  .has-#{"" + $name}-color {
     color: $color;
   }
 
-  .has-#{$name}-background-color {
+  .has-#{"" + $name}-background-color {
     background-color: $color;
   }
 }
