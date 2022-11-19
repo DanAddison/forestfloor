@@ -25,10 +25,8 @@
 <header class="site-header" id="masthead">
 
 	<div class="header__inner container">
-
-		<?php if( has_nav_menu( 'side' ) ) : ?>	
-			<?php get_template_part( 'template-parts/side-navigation' ); ?>
-		<?php endif; ?>
+				
+		<?php get_template_part( 'template-parts/side-navigation' ); ?>
 	
 		<button id="js-menu-button" class="menu-button hamburger hamburger--squeeze" type="button" aria-label="Menu" aria-controls="navigation">
 			<span class="hamburger-box">

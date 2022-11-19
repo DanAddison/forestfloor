@@ -1,69 +1,47 @@
-.footer__inner {
-	@include center-block;
-	width: 95%;
-}
-
-.footer-widgets {
-	.widget {
-		margin-bottom: $spacing;
+.footer {
+	a {
+		text-decoration: none;
 	}
-	.widget-title {
-		margin-bottom: 0;
-	}
-
-	.widget_nav_menu {
-		li {
-			margin-bottom: 0;
-		}
-	}
-
-	@include mq($bp-4) {
+	
+	&__inner {
+		@include center-block;
+		width: 95%;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		border-top: 1px solid $grey-light;
 		display: flex;
-		min-width: 100%;
-		margin-right: -1em;
-		margin-left: -1em;
+		justify-content: space-between;
+	}
 
-		.widget {
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			flex: 1;
-			padding-left: 1em;
-			padding-right: 1em;
+	&__legal {
+
+		.footer-nav {
+			margin-bottom: 20px;
 		}
 	}
-}
-
-.footer__social {// ul
-	list-style: none;
-	padding-left: 0;
-	display: flex;
-	margin-bottom: 2em;
-
-	li {
-		margin-right: 0.75em;
+	
+	
+	&__social {// ul
+		list-style: none;
+		padding-left: 0;
+		display: flex;
+		margin-top: 0;
+		margin-bottom: 0;
+		
+		li {
+			margin-left: 0.75em;
+		}
+		
+		.icon {
+			display: block;
+			background-size: contain;
+			background-repeat: no-repeat;
+			
+			&::before {
+				width: 3em;
+				height: 3em;
+			}
+		}
 	}
-
-	.icon {
-		display: block;
-		width: 2em;
-		height: 2em;
-		background-size: contain;
-		background-repeat: no-repeat;
-
-		// Use a few SVGs instead of the icon font?
-		// &-facebook {
-		//   background-image: url(../images/icon-facebook.svg);
-		//   width: 1.8em;
-		// }
-
-		// &-instagram {
-		//   background-image: url(../images/icon-instagram.svg);
-		// }
-
-		// &-youtube {
-		//   background-image: url(../images/icon-youtube.svg);
-		//   width: 2.4em;
-		// }
-	}
+	
 }
