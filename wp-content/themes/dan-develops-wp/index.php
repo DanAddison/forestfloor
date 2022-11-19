@@ -13,7 +13,12 @@
 get_header(); ?>
 
 <main id="main" class="main-content">
-<?php the_post(); the_content(); ?>
+
+	<?php
+		the_post();
+		the_content();
+	?>
+
 </main>
 
 <?php get_footer(); ?>

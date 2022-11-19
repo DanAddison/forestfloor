@@ -11,14 +11,17 @@
 
 	// increase overall editor width
 	.is-root-container.block-editor-block-list__layout {
-		max-width: $container !important;
-		margin-left: auto !important;
-		margin-right: auto !important;
+		// max-width: $container !important;
+		// margin-left: auto !important;
+		// margin-right: auto !important;
+		@include center-block;
+		width: 95%;
+		max-width: $bp-3;
 	}
 
 	// font family
 	.wp-block {
-		font-family: $body-font-family;
+		font-family: $copy-face;
 	}
 
 	// identify reusable blocks in the editor

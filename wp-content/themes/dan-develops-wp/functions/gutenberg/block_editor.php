@@ -27,7 +27,7 @@ function da_block_categories( $categories, $post ) {
     
    return $categories;
 }
-add_filter( 'block_categories', 'da_block_categories', 10, 2 );	
+add_filter( 'block_categories_all', 'da_block_categories', 10, 2 );	
 
 
 /**

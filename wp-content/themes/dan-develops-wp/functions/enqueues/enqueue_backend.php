@@ -5,7 +5,7 @@
  */
 function enqueue_block_editor_assets() {
 
-	$editor_style_path 		= '/build/gulp-output/editor.build.css';
+	$editor_style_path = '/build/gulp-output/editor.build.css';
 
 	wp_enqueue_style(
 		'da-editor-styles',

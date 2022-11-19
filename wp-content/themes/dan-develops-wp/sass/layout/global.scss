@@ -9,12 +9,12 @@ main.main-content {
 }
 
 main.main-content > * {
-  &:first-child:not(.alignfull):not(.block-hero-image) {
+  &:first-child:not(.alignfull):not(.hero-image) {
     margin-top: 4rem;
   }
 }
 
-main.main-content > *:not(.alignwide):not(.alignfull) {
+main.main-content > *:not(.alignwide):not(.alignfull):not(.hero-image) {
   @include center-block;
   width: 95%;
   max-width: $bp-3;

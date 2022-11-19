@@ -7,7 +7,7 @@
 ?>
 
 <div class="gig-listing">
-	<h2>Upcoming gigs</h2>
+	<h2 class="gig-listing__heading">Upcoming gigs</h2>
 
 	<ul class="gig-listing__inner">
 		
@@ -46,14 +46,14 @@
 
 			<li class="gig-listing__item">
 
-				<div class="gig-listing__header">
-					<h3 class="gig-listing__heading"><?php the_title(); ?></h3>
+				<div class="gig-listing__item-header">
+					<h3 class="gig-listing__item-heading"><?php the_title(); ?></h3>
 					<p><?= $venue; ?></p>
 					<p><?= $date_formatted; ?></p>
 				</div>
 
 				<?php if($image_id || $description) : ?>
-					<div class="gig-listing__content">
+					<div class="gig-listing__item-content">
 						
 						<?php if($image_id) :
 							echo wp_get_attachment_image( $image_id, 'medium' );

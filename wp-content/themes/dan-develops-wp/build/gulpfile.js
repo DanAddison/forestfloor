@@ -24,9 +24,11 @@ var paths = {
 	editorStyles: {
 		watchDirs: [
 			"../sass/editor-only.scss",
-			"../blocks/**/editor.scss"
+			"../blocks/**/editor.scss",
+			"../sass/**/*",
+			"../blocks/**/block.scss"
 		],
-		src: "index-backend.scss",
+		src: "index-editor.scss",
 		dest: "./gulp-output"
 	},
 	scripts: {
@@ -80,7 +82,7 @@ function compileFrontendSass() {
 }
 
 function compileEditorSass() {
-	return compileSass(editorStyles.src, 'editor.build.css');
+	return compileSass(paths.editorStyles.src, 'editor.build.css');
 }
 
 // declare gulp tasks
