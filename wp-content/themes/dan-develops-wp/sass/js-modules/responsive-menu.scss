@@ -4,7 +4,7 @@
   position: inherit;
 }
 
-.main-nav {
+.side-nav {
   @include hide-visually("hide");
   opacity: 0;
   display: none;
@@ -46,8 +46,4 @@
   outline: none;
   position: relative;
   z-index: 1000;
-
-  @include mq($bp-menu) {
-    display: none !important;
-  }
 }

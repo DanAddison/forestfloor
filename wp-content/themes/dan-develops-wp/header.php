@@ -26,35 +26,20 @@
 
 	<div class="header__inner container">
 
+		<?php if( has_nav_menu( 'side' ) ) : ?>	
+			<?php get_template_part( 'template-parts/side-navigation' ); ?>
+		<?php endif; ?>
+	
 		<button id="js-menu-button" class="menu-button hamburger hamburger--squeeze" type="button" aria-label="Menu" aria-controls="navigation">
 			<span class="hamburger-box">
 				<span class="hamburger-inner"></span>
 			</span>
 		</button><!-- .hamburger -->
-
-		<div class="site-branding">				
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		</div><!-- .site-branding -->
-
-
-
-		<?php if( has_nav_menu( 'main' ) ) : ?>	
-			<?php get_template_part( 'template-parts/side-navigation' ); ?>
-		<?php endif; ?>
-	
-		<div class="hamburger-container">
-			<button class="menu-button hamburger hamburger--arrowturn" type="button" id="js-menu-button">
-				<span class="hamburger-box">
-					<span class="hamburger-inner"></span>
-				</span>
-			</button><!-- .hamburger -->
-		</div>
 			
-		<div class="site-branding">							
-			<h1 class="site-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</h1>
-		</div><!-- .site-branding -->
+		<a class="site-branding" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<h1 class="site-branding__title"><?php bloginfo( 'name' ); ?></h1>
+			<span class="site-branding__logo"></span>
+		</a><!-- .site-branding -->
 		
 		<?php get_template_part( 'template-parts/woo-navigation' ); ?>
 

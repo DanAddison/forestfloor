@@ -1,0 +1,37 @@
+/*--------------------------------------------------------------
+# Cart + User icons
+--------------------------------------------------------------*/
+.menu--icons {
+	text-align: right;
+  
+	li {
+	  margin-bottom: 0;
+	  padding: 0 0.4em;
+	  display: inline-block;
+	  position: relative;
+	  font-size: 1.4em;
+  
+	  a {
+		text-decoration: none;
+	  }
+  
+	  i {
+		position: relative;
+	  }
+	}
+  
+	.icon-user {
+	  font-size: 108%;
+	}
+	.icon-cart {
+	  .cart-count {
+		position: absolute;
+		left: 104%;
+		top: -8px;
+		font-family: $headings-face;
+		font-size: em(10);
+		font-weight: 700;
+		color: $grey-dark;
+	  }
+	}
+  }

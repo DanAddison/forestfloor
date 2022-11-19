@@ -1,5 +1,5 @@
 .site-header {
-  background-color: $canvas-dark;
+  background-color: $white;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
@@ -11,41 +11,42 @@
   justify-content: space-between;
 }
 
-.site-branding {
-  align-self: flex-end;
-  max-width: 300px;
-  margin-bottom: -1em;
-  padding-right: $spacing;
-
-  img {
-    margin-bottom: 0;
-  }
-
-  .site-title {
-    // display: none;
-    margin: 0;
-    font-size: 1.5rem;
-    text-align: center;
-
-    a {
-      color: $white;
-      text-decoration: none;
-    }
-  }
-}
-
-.main-nav {
-  display: block;
-}
-
 button.menu-button {
-  text-align: right;
-  margin-bottom: -8px;
-  font-size: 0.8em;
+	width: 100px;
+	flex-shrink: 0;
+  
+	.hamburger-inner,
+	.hamburger-inner::before,
+	.hamburger-inner::after {
+	  background-color: $black;
+	}
+}
 
-  .hamburger-inner,
-  .hamburger-inner::before,
-  .hamburger-inner::after {
-    background-color: $white;
+.site-branding {
+	display: flex;
+	justify-content: center;
+  width: calc(100% - 200px);
+  text-align: center;
+  flex-shrink: 1;
+
+  &__title {
+	@include hide-visually;
+  }
+
+  &__logo {
+	display: block;
+	width: 230px;
+	height: 40px;
+	max-width: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(../../assets/images/forestfloor-wordmark.png);
+
   }
 }
+
+.woo-nav {
+	width: 100px;
+	flex-shrink: 0;
+}
+
