@@ -1,7 +1,16 @@
 .site-header {
+	z-index: 1;
   background-color: $white;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .logged-in.admin-bar & {
+		top: 32px;
+	}
 }
 
 .header__inner {
@@ -11,26 +20,26 @@
   justify-content: space-between;
 }
 
-.menu-button {
-	width: 100px;
-	flex-shrink: 0;
-
-	text-align: left;
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+.header-nav {
+	display: flex;
+	align-items: center;
 }
 
+// .menu-button {
+// 	width: 100px;
+// 	flex-shrink: 0;
+
+// 	text-align: left;
+// 	background: none;
+// 	color: inherit;
+// 	border: none;
+// 	padding: 0;
+// 	font: inherit;
+// 	cursor: pointer;
+// 	outline: inherit;
+// }
+
 .site-branding {
-	display: flex;
-	justify-content: center;
-  width: calc(100% - 200px);
-  text-align: center;
-  flex-shrink: 1;
 
   &__title {
 	@include hide-visually;
@@ -38,7 +47,7 @@
 
   &__logo {
 	display: block;
-	width: 170px;
+	width: 140px;
 	height: 30px;
 	max-width: 100%;
 	background-size: contain;
@@ -49,7 +58,6 @@
 }
 
 .woo-nav {
-	width: 100px;
 	flex-shrink: 0;
 }
 

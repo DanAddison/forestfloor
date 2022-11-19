@@ -1,5 +1,6 @@
 .gig-listing {
-	padding-top: 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 
 	&__heading {
 		margin-top: 0;
@@ -14,6 +15,11 @@
 
 	&__item {// li
 		padding-top: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid $grey-lightest;
+		&:first-of-type {
+			border-top: 1px solid $grey-lightest;
+		}
 
 		&-header {
 			position: relative;

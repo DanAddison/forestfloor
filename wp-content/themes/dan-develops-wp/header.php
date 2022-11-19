@@ -26,18 +26,17 @@
 
 	<div class="header__inner container">
 
-		<?php get_template_part( 'template-parts/side-navigation' ); ?>
-	
-		<button class="menu-button" type="button" aria-label="Menu" aria-controls="navigation">
-			<span class="icon icon-menu"></span>
-		</button>
+		<?php // get_template_part( 'template-parts/side-navigation' ); ?>
 			
 		<a class="site-branding" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<h1 class="site-branding__title"><?php bloginfo( 'name' ); ?></h1>
 			<span class="site-branding__logo"></span>
 		</a><!-- .site-branding -->
 		
-		<?php get_template_part( 'template-parts/woo-navigation' ); ?>
+		<div class="header-nav">
+			<?php get_template_part( 'template-parts/main-navigation' ); ?>
+			<?php get_template_part( 'template-parts/woo-navigation' ); ?>
+		</div>
 
 	</div><!-- .container -->
 
