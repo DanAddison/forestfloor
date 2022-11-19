@@ -100,6 +100,7 @@ Thumbs.db
 !wp-content/plugins/autodescription
 !wp-content/plugins/disable-comments
 !wp-content/plugins/wordfence
+!wp-content/plugins/worker
 
 # track the relevant starter-theme or child-theme
 !wp-content/themes/dan-develops-wp/
