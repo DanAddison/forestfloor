@@ -25,12 +25,12 @@
 <header class="site-header" id="masthead">
 
 	<div class="header__inner container">
-				
+
 		<?php get_template_part( 'template-parts/side-navigation' ); ?>
 	
-		<button id="js-menu-button" class="menu-button hamburger hamburger--squeeze" type="button" aria-label="Menu" aria-controls="navigation">
+		<button class="menu-button" type="button" aria-label="Menu" aria-controls="navigation">
 			<span class="hamburger-box">
-				<span class="hamburger-inner"></span>
+				<span class="hamburger-inner"> Menu</span>
 			</span>
 		</button><!-- .hamburger -->
 			
