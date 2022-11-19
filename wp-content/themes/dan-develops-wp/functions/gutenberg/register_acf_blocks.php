@@ -59,14 +59,14 @@ function da_register_blocks() {
 		));
 
 		acf_register_block_type(array(
-			'name'			  	  => 'post archive',
-			'title'				    => __('Post Archive'),
-			'description'		  => __('A custom block for displaying posts.'),
+			'name'			  	  => 'gig-listing',
+			'title'				    => __('Gig Listing'),
+			'description'		  => __('A custom block for displaying upcoming gigs.'),
 			'render_callback'	=> 'da_acf_block_render_callback',
 			'category'			  => 'da-blocks',
 			'mode'						=> 'edit',
 			'icon'            => array( 'background' => '#e0edee', 'src' => 'list-view' ),
-			'keywords'			  => array( 'image', 'card', 'link' ),
+			'keywords'			  => array( 'gigs', 'shows', 'events' ),
 			'supports'        => array( 'align' => false ),
 		));
 		
@@ -79,7 +79,7 @@ function da_acf_block_render_callback( $block ) {
 	// convert name ("acf/example") into path friendly slug ("example")
 	$slug = str_replace('acf/', '', $block['name']);
 	
-	if( file_exists( get_theme_file_path('blocks-acf/'.$slug.'/'.$slug.'.php') ) ) {
-		include( get_theme_file_path('blocks-acf/'.$slug.'/'.$slug.'.php') );
+	if( file_exists( get_theme_file_path('blocks/'.$slug.'/'.$slug.'.php') ) ) {
+		include( get_theme_file_path('blocks/'.$slug.'/'.$slug.'.php') );
 	}
 }

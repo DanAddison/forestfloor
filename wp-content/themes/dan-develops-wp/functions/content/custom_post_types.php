@@ -27,7 +27,7 @@ function register_custom_post_types() {
 	$args = array(
 		'label'                 => 'Gig',
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor' ),
+		'supports'              => array( 'title', 'custom-fields' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,

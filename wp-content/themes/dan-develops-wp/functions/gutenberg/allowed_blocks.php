@@ -85,6 +85,7 @@ function da_allowed_block_types( $allowed_blocks, $post ) {
 
 				// add our own blocks
 				'acf/hero-image',
+				'acf/gig-listing',
 			);
 	}
 	// Allow defaults in all other post types
