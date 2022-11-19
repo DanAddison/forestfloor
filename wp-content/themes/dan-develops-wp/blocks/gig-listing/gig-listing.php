@@ -1,3 +1,11 @@
+<?php
+/**
+ * Block Name: Gig Listing
+ */
+
+ // TODO: give this accordion functionality
+?>
+
 <div class="gig-listing">
 	<h2>Upcoming gigs</h2>
 
@@ -32,16 +40,32 @@
 			$venue = get_field('acf_venue', $post_id);
 			$date = get_field('acf_date', $post_id);
 			$date_formatted = date("D j F, g:i a", strtotime($date));
-			$url = get_field('acf_link', $post_id);
+			$image_id = get_field('acf_poster', $post_id);
+			$description = get_field('acf_description', $post_id);
 			?>
 
 			<li class="gig-listing__item">
-				<h3><?php the_title(); ?></h3>
-				<p><?= $venue; ?></p>
-				<p><?= $date_formatted; ?></p>
-				<?php if($url) : ?>
-					<p><a href="<?= $url; ?>">More info</a></p>
+
+				<div class="gig-listing__header">
+					<h3 class="gig-listing__heading"><?php the_title(); ?></h3>
+					<p><?= $venue; ?></p>
+					<p><?= $date_formatted; ?></p>
+				</div>
+
+				<?php if($image_id || $description) : ?>
+					<div class="gig-listing__content">
+						
+						<?php if($image_id) :
+							echo wp_get_attachment_image( $image_id, 'medium' );
+						endif; ?>
+
+						<?php if($description) : ?>
+							<div><?= $description; ?></div>
+						<?php endif; ?>
+							
+					</div>
 				<?php endif; ?>
+
 			</li>
 
 			<?php
