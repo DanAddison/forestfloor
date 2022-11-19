@@ -102,7 +102,7 @@ gulp.task('editorCss', () => {
 // watch task
 function watch() {
 	browserSync.init({
-		proxy: "localhost:10005",
+		proxy: "localhost:10010",
 		notify: false
 	});
 
