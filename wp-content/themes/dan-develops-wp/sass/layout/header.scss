@@ -11,15 +11,18 @@
   justify-content: space-between;
 }
 
-button.menu-button {
+.menu-button {
 	width: 100px;
 	flex-shrink: 0;
-  
-	.hamburger-inner,
-	.hamburger-inner::before,
-	.hamburger-inner::after {
-	  background-color: $black;
-	}
+
+	text-align: left;
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 .site-branding {
@@ -35,8 +38,8 @@ button.menu-button {
 
   &__logo {
 	display: block;
-	width: 230px;
-	height: 40px;
+	width: 170px;
+	height: 30px;
 	max-width: 100%;
 	background-size: contain;
 	background-repeat: no-repeat;

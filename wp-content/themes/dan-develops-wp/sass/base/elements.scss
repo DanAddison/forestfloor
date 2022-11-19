@@ -124,8 +124,7 @@ body:not(.wp-admin){
 
 	/* Buttons
 	–––––––––––––––––––––––––––––––––––––––––––––––––– */
-	.button,
-	button,
+	.button
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"] {
@@ -148,7 +147,6 @@ body:not(.wp-admin){
 	}
 
 	.button:hover,
-	button:hover,
 	input[type="submit"]:hover,
 	input[type="reset"]:hover,
 	input[type="button"]:hover,

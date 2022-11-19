@@ -18,17 +18,7 @@
 			<p class="credit">Site: <a href="https://danaddison.uk">Dan Addison</a></p>
 		</div>
 
-		<?php if( have_rows('social_media', 'option') ): ?>
-			<ul class="footer__social">
-			<?php while( have_rows('social_media', 'option') ): the_row(); 
-				$platform = get_sub_field('platform');
-				?>
-				<li><a href="<?php the_sub_field('url'); ?>" target="_blank">
-				<span class="icon icon-<?php the_sub_field('platform'); ?>"></span>
-				</a></li>
-			<?php endwhile; ?>
-			</ul>
-		<?php endif; ?>
+		<?php get_template_part( 'template-parts/social-icons' ); ?>
 
 	</div><!-- .container -->
 

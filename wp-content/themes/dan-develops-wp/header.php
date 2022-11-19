@@ -29,10 +29,8 @@
 		<?php get_template_part( 'template-parts/side-navigation' ); ?>
 	
 		<button class="menu-button" type="button" aria-label="Menu" aria-controls="navigation">
-			<span class="hamburger-box">
-				<span class="hamburger-inner"> Menu</span>
-			</span>
-		</button><!-- .hamburger -->
+			<span class="icon icon-menu"></span>
+		</button>
 			
 		<a class="site-branding" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<h1 class="site-branding__title"><?php bloginfo( 'name' ); ?></h1>
