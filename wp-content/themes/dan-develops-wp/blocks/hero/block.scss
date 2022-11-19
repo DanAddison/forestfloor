@@ -1,7 +1,7 @@
-.hero-image {
+.hero {
   @include image-background;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
   height: 200px;
   margin-bottom: 2em;
 	// filter: contrast(30%);

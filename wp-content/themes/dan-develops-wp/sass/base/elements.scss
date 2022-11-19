@@ -40,18 +40,18 @@ body:not(.wp-admin){
 
 	/* Typography
 	–––––––––––––––––––––––––––––––––––––––––––––––––– */
-	h1,
-	h2,
-	h3,
-	h4 {
-	font-family: $headings-face;
-	font-weight: $headings-weight;
-	line-height: 1.2;
-	margin-top: 1.25em;
-	margin-bottom: 0.75em;
+	>h1,
+	>h2,
+	>h3,
+	>h4 {
+		font-family: $headings-face;
+		font-weight: $headings-weight;
+		line-height: 1.2;
+		margin-top: 1.25em;
+		margin-bottom: 0.75em;
 	}
 
-	h1 {
+	>h1 {
 	font-size: 2rem; // 32px
 
 	@include mq($bp-2) {
@@ -63,7 +63,7 @@ body:not(.wp-admin){
 	}
 	}
 
-	h2 {
+	>h2 {
 	font-size: 1.625rem; // 26
 
 	@include mq($bp-2) {
@@ -75,7 +75,7 @@ body:not(.wp-admin){
 	}
 	}
 
-	h3 {
+	>h3 {
 	font-size: 1.375rem; // 22
 
 	@include mq($bp-2) {
@@ -87,7 +87,7 @@ body:not(.wp-admin){
 	}
 	}
 
-	h4 {
+	>h4 {
 	font-size: 1.125rem; //18
 
 	@include mq($bp-2) {
@@ -99,31 +99,27 @@ body:not(.wp-admin){
 	}
 	}
 
-	p {
-	font-size: 1rem;
-	margin-top: 0;
+	>p {
+		font-size: 1rem;
+		margin-top: 0;
 
-	&:last-child {
-		margin-bottom: 0;
-	}
+		&:last-child {
+			margin-bottom: 0;
+		}
 
-	@include mq($bp-2) {
-		font-size: 1rem; //16px
-	}
+		@include mq($bp-2) {
+			font-size: 1rem; //16px
+		}
 
-	@include mq($bp-3) {
-		font-size: 1.125rem; //18px
-	}
+		@include mq($bp-3) {
+			font-size: 1.125rem; //18px
+		}
 	}
 
 	/* Links
 	–––––––––––––––––––––––––––––––––––––––––––––––––– */
 	a {
-	color: $grey-darkest;
-
-	// &:visited {
-	//   color: $color__link-visited;
-	// }
+		color: $grey-darkest;
 	}
 
 	/* Buttons
@@ -133,22 +129,22 @@ body:not(.wp-admin){
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"] {
-	display: inline-block;
-	height: 38px;
-	padding: 0 30px;
-	color: $black;
-	text-align: center;
-	font-size: 12px;
-	font-weight: 600;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	text-decoration: none;
-	white-space: nowrap;
-	background-color: $white;
-	border-radius: 4px;
-	border: 1px solid $black;
-	cursor: pointer;
-	box-sizing: border-box;
+		display: inline-block;
+		height: 38px;
+		padding: 0 30px;
+		color: $black;
+		text-align: center;
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		text-decoration: none;
+		white-space: nowrap;
+		background-color: $white;
+		border-radius: 4px;
+		border: 1px solid $black;
+		cursor: pointer;
+		box-sizing: border-box;
 	}
 
 	.button:hover,
@@ -203,30 +199,6 @@ body:not(.wp-admin){
 	width: 100%;
 	}
 
-	/* Lists
-	–––––––––––––––––––––––––––––––––––––––––––––––––– */
-	ul {
-	list-style: disc inside;
-	}
-	ol {
-	list-style: decimal inside;
-	}
-	ol,
-	ul {
-	padding-left: 0;
-	margin-top: 0;
-	}
-	ul ul,
-	ul ol,
-	ol ol,
-	ol ul {
-	margin: 1.5em 0 1.5em 3em;
-	font-size: 90%;
-	}
-	li {
-	margin-bottom: 1em;
-	}
-
 	/* Code
 	–––––––––––––––––––––––––––––––––––––––––––––––––– */
 	code {
@@ -261,31 +233,6 @@ body:not(.wp-admin){
 	padding-right: 0;
 	}
 
-	/* Spacing
-	–––––––––––––––––––––––––––––––––––––––––––––––––– */
-	button,
-	.button {
-	margin-bottom: 1em;
-	}
-	input,
-	textarea,
-	select,
-	fieldset {
-	margin-bottom: 1.5em;
-	}
-	pre,
-	blockquote,
-	dl,
-	figure,
-	table,
-	ul,
-	ol,
-	form {
-	margin-bottom: 2.5em;
-	}
-
-	/* Misc
-	–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 
 }

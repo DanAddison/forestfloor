@@ -62,6 +62,8 @@
 						<?php if($description) : ?>
 							<div><?= $description; ?></div>
 						<?php endif; ?>
+
+						<a href="#" class="gig-listing__item-close"></a>
 							
 					</div>
 				<?php endif; ?>

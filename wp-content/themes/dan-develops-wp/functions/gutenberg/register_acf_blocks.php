@@ -9,19 +9,7 @@ function da_register_blocks() {
 
 		// register blocks
 		acf_register_block_type(array(
-			'name'			  	  => 'accordion',
-			'title'				    => __('Accordion'),
-			'description'		  => __('A custom block for adding the Plan Your Visit info accordion.'),
-			'render_callback'	=> 'da_acf_block_render_callback',
-			'category'			  => 'da-blocks',
-			'mode'						=> 'edit',
-			'icon'            => array( 'background' => '#e0edee', 'src' => 'list-view' ),
-			'keywords'			  => array( 'accordion', 'plan' ),
-			'supports'        => array( 'align' => false ),
-		));
-
-		acf_register_block_type(array(
-			'name'			  	  => 'hero-image',
+			'name'			  	  => 'hero',
 			'title'				    => __('Hero Image'),
 			'description'		  => __('A custom block for adding a responsive fullscreen background image.'),
 			'render_callback'	=> 'da_acf_block_render_callback',

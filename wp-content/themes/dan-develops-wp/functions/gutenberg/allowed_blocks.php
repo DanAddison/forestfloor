@@ -59,9 +59,7 @@ function da_allowed_block_types( $allowed_blocks, $post ) {
 		// 'wpforms/form-selector',
 		
 		// add our own blocks
-		'acf/accordion',
-		// 'acf/page-heading',
-		'acf/hero-image',
+		'acf/hero',
 		'acf/link-card',
 		);
 	}
@@ -84,7 +82,7 @@ function da_allowed_block_types( $allowed_blocks, $post ) {
 				'core/block',
 
 				// add our own blocks
-				'acf/hero-image',
+				'acf/hero',
 				'acf/gig-listing',
 			);
 	}
