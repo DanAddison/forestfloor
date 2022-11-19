@@ -24,22 +24,8 @@
 #   this version ignores all files by default
 # -----------------------------------------------------------------
 
-# ignore everything in the root except the "wp-content" directory.
+# ignore everything by default
 /*
-!wp-content/
-
-# ignore everything in the "wp-content" directory, except:
-# mu-plugins, plugins, and themes directories
-wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
-!wp-content/themes/
-
-# ignore all mu-plugins, plugins, and themes
-# unless explicitly whitelisted at the end of this file
-wp-content/mu-plugins/*
-wp-content/plugins/*
-wp-content/themes/*
 
 # ignore all files starting with . or ~
 .*
@@ -97,12 +83,15 @@ Thumbs.db
 
 # track these plugins
 !wp-content/plugins/advanced-custom-fields-pro
+!wp-content/plugins/autodescription
+!wp-content/plugins/disable-comments
+!wp-content/plugins/wordfence
 
 # track the relevant starter-theme or child-theme
 !wp-content/themes/dan-develops-wp/
 
 # track the latest WP default theme too - it's best for new install to open with this initially
-!wp-content/themes/twentytwentytwo/
+!wp-content/themes/twentytwentythree/
 
 # ignore compiled assets
 wp-content/themes/dan-develops-wp/build/gulp-output/*
