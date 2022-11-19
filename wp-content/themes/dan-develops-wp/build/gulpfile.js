@@ -39,7 +39,7 @@ var paths = {
 			"../blocks/**/*.php",
 			"../functions/**/*",
 			"../template-pages/*",
-			"../template-parts/*"
+			"../template-template-parts/*"
 		]
 	}
 };

@@ -25,7 +25,7 @@ get_header(); ?>
 
 				<article <?php post_class( 'search-result-item' ); ?>>
 
-					<?php get_template_part( 'parts/post-header' ); ?>
+					<?php get_template_part( 'template-parts/post-header' ); ?>
 				
 					<div class="post__excerpt">
 						<?php the_excerpt(); ?>		
@@ -39,7 +39,7 @@ get_header(); ?>
 
 			else :
 
-				get_template_part( 'parts/content', 'none' );
+				get_template_part( 'template-parts/content', 'none' );
 
 			endif; ?>
 

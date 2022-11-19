@@ -39,7 +39,7 @@
 		</button><!-- .hamburger -->
 
 		<?php if( has_nav_menu( 'main' ) ) : ?>	
-		<?php get_template_part( 'parts/primary-navigation' ); ?>
+		<?php get_template_part( 'template-parts/primary-navigation' ); ?>
 		<?php endif; ?>
 
 	</div><!-- .container -->
