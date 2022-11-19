@@ -1,15 +1,15 @@
 <p align="center">
   <a href="">
-    <img alt="" src="wp-content/themes/dan-develops-wp/screenshot.png" width="900" />
+    <img alt="" src="wp-content/themes/dan-develops-wp/screenshot.png" width="800" />
   </a>
 </p>
 <h1 align="center">
-  Dan Develops WP
+  forestfloor
 </h1>
 
 ## Description
 
-A really awesome starting point for creating bespoke WordPress websites.
+A WordPress site for a band, featuring gig listing and merch shop using Printful integration.
 
 ## Build tooling
 
@@ -31,4 +31,4 @@ Gulp process is currently using node v11.6.0 (npm v6.9.0)
 
 ## Credits
 
-- Initially based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+- Based on dan-develops-wp which in turn was initially based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
