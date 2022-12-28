@@ -21,10 +21,12 @@ p.has-large-font-size {
 ## Columns
 *********************************************************/
 .wp-block-columns {
-  width: 95%;
-  .wp-block-column {
-    margin-bottom: 2em;
-  }
+	@include center-block;
+	width: 95%;
+	max-width: $bp-6;
+	.wp-block-column {
+		margin-bottom: 2em;
+	}
 }
 
 /*********************************************************
@@ -81,9 +83,14 @@ p.has-large-font-size {
 ## image block
 *********************************************************/
 .wp-block-image {
-  img {
-    display: block;
-  }
+
+	.wp-block-columns & {
+		margin-bottom: 0;
+	}
+
+	img {
+		display: block;
+	}
 }
 
 /*********************************************************

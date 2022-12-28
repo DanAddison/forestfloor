@@ -17,7 +17,8 @@ $spacing: 2em;
 /*------------------------------------*\
     Font Variables
 \*------------------------------------*/
-$copy-face: 'EB Garamond', serif;
+// $copy-face: 'EB Garamond', serif;
+$copy-face: 'Stylish', sans-serif;
 $headings-face: 'Stylish', sans-serif;
 $headings-weight: normal;
 
@@ -27,18 +28,18 @@ $headings-weight: normal;
 $white: #fff;
 $grey-lightest: #dfdfdf;
 $grey-light: #cbcbcb;
-$grey: #aeaeae;
-$grey-dark: #7b7b7b;
-$grey-darkest: #3f3f3f;
-$black: #000;
+$grey: #666666;
+$grey-dark: #555555;
+$grey-darkest: #333333;
+$black: #111111;
 
-$copy: #464646;
+$copy: $black;
 
 $primary: #53c9c8;
 $secondary: #7a53c9;
 
 // Backgrounds
-$canvas-light: #f2f2f2;
+$canvas-light: #fcfcfc;
 $canvas-medium: $grey-light;
 $canvas-dark: $grey-darkest;
 

@@ -17,3 +17,6 @@ require_once('excerpts.php');
 
 // Specify template file per post type
 require_once('set_templates.php');
+
+// Custom WooCommerce functions
+require_once('woocommerce.php');

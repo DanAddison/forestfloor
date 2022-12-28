@@ -1,7 +1,4 @@
 .footer {
-	a {
-		text-decoration: none;
-	}
 	
 	&__inner {
 		@include center-block;
@@ -18,6 +15,10 @@
 		.footer-nav {
 			margin-bottom: 20px;
 		}
+
+		p {
+			font-size: 1rem !important;
+		}
 	}
 	
 	
@@ -31,6 +32,10 @@
 		li {
 			margin-left: 0.75em;
 		}
+
+		a {
+			text-decoration: none;
+		}
 		
 		.icon {
 			display: block;
@@ -38,8 +43,7 @@
 			background-repeat: no-repeat;
 			
 			&::before {
-				width: 3em;
-				height: 3em;
+				font-size: 1.5rem;
 			}
 		}
 	}

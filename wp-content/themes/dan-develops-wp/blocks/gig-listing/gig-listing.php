@@ -48,23 +48,25 @@
 
 				<div class="gig-listing__item-header">
 					<h3 class="gig-listing__item-heading"><?php the_title(); ?></h3>
-					<p><?= $venue; ?></p>
-					<p><?= $date_formatted; ?></p>
+					<p class="gig-listing__item-venue"><?= $venue; ?></p>
+					<p class="gig-listing__item-date"><?= $date_formatted; ?></p>
 				</div>
 
 				<?php if($image_id || $description) : ?>
 					<div class="gig-listing__item-content">
+						<div class="gig-listing__item-content-wrapper">
 						
-						<?php if($image_id) :
-							echo wp_get_attachment_image( $image_id, 'medium' );
-						endif; ?>
+							<?php if($image_id) :
+								echo wp_get_attachment_image( $image_id, 'medium' );
+							endif; ?>
 
-						<?php if($description) : ?>
-							<div><?= $description; ?></div>
-						<?php endif; ?>
+							<?php if($description) : ?>
+								<div class="gig-listing__item-description"><?= $description; ?></div>
+							<?php endif; ?>
 
-						<a href="#" class="gig-listing__item-close"></a>
-							
+							<a href="#" class="gig-listing__item-close"></a>
+								
+						</div>
 					</div>
 				<?php endif; ?>
 
