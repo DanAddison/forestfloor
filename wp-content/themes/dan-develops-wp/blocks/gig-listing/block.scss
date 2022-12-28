@@ -74,6 +74,7 @@
 			}
 
 			img {
+				height: fit-content;
 				@include mq($bp-2) {
 					flex: 0 0 300px;
 					margin-right: 40px;
@@ -83,7 +84,10 @@
 
 		&-description {
 			margin-top: 20px;
-			padding-right: 20px;
+			@include mq($bp-2) {
+				margin-top: 0;
+				padding-right: 20px;
+			}
 		}
 
 		&-close {

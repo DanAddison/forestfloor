@@ -40,12 +40,14 @@ body:not(.wp-admin){
 
 	/* Typography
 	–––––––––––––––––––––––––––––––––––––––––––––––––– */
-	>h1,
-	>h2,
-	>h3,
-	>h4 {
-		margin-top: 1.25em;
-		margin-bottom: 0.75em;
+	.main-content {	
+		>h1,
+		>h2,
+		>h3,
+		>h4 {
+			margin-top: 1.25em;
+			margin-bottom: 0.75em;
+		}
 	}
 	
 	h1,
