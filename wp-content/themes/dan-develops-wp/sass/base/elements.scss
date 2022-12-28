@@ -40,10 +40,10 @@ body:not(.wp-admin){
 
 	/* Typography
 	–––––––––––––––––––––––––––––––––––––––––––––––––– */
-	>h1,
-	>h2,
-	>h3,
-	>h4 {
+	h1,
+	h2,
+	h3,
+	h4 {
 		font-family: $headings-face;
 		font-weight: $headings-weight;
 		line-height: 1.2;
@@ -51,7 +51,7 @@ body:not(.wp-admin){
 		margin-bottom: 0.75em;
 	}
 
-	>h1 {
+	h1 {
 	font-size: 2rem; // 32px
 
 	@include mq($bp-2) {
@@ -63,7 +63,7 @@ body:not(.wp-admin){
 	}
 	}
 
-	>h2 {
+	h2 {
 	font-size: 1.625rem; // 26
 
 	@include mq($bp-2) {
@@ -75,7 +75,7 @@ body:not(.wp-admin){
 	}
 	}
 
-	>h3 {
+	h3 {
 	font-size: 1.375rem; // 22
 
 	@include mq($bp-2) {
@@ -87,7 +87,7 @@ body:not(.wp-admin){
 	}
 	}
 
-	>h4 {
+	h4 {
 	font-size: 1.125rem; //18
 
 	@include mq($bp-2) {
@@ -99,7 +99,7 @@ body:not(.wp-admin){
 	}
 	}
 
-	>p {
+	p {
 		font-size: 1rem;
 		margin-top: 0;
 
