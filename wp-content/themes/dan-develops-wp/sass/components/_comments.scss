@@ -9,7 +9,7 @@
   margin-left: 0;
   margin-bottom: $spacing * 2;
 
-  @include mq($bp-l) {
+  @include mq($bp-4) {
     margin-left: 2em;
   }
 }
@@ -54,9 +54,9 @@
 ## Forn for adding new comments
 *********************************************************/
 .comment-form {
-  max-width: $bp-l;
+  max-width: $bp-4;
 
-  @include mq($bp-l) {
+  @include mq($bp-4) {
     margin-left: 2em;
   }
 

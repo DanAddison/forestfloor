@@ -1,0 +1,121 @@
+/*********************************************************
+## Single product
+*********************************************************/
+// all images including main one
+.woocommerce div.product div.images img {
+	border: 1px solid $grey;
+  }
+  
+  // gallery images specifically
+  .woocommerce div.product div.images .flex-control-thumbs {
+	margin-top: $spacing;
+  
+	li {
+	}
+  }
+  
+  // match add-to-cart button size with adjacent qty picker
+  .woocommerce div.product form.cart .button {
+	font-size: 85%;
+  }
+  
+  .product_title {
+	display: inline-block;
+  }
+  
+  .woocommerce-product-details__short-description {
+	display: none;
+  }
+  
+  .up-sells,
+  .related.products {
+	clear: both;
+	@include mq($bp-4) {
+	  padding-top: $spacing * 2;
+	}
+  }
+  
+  .site-main {
+	.up-sells h2,
+	.related.products h2 {
+	  max-width: none;
+	}
+  }
+  
+  .woocommerce div.product div.summary {
+	margin-bottom: $spacing * 2;
+  }
+  
+  // price
+  .woocommerce div.product p.price,
+  .woocommerce div.product span.price {
+	font-size: em(28);
+  }
+  
+  // add to cart button
+  .woocommerce div.product form.cart .button {
+	font-size: 100%;
+  }
+  
+  .summary.entry-summary {
+	// 'description' heading
+	> h2 {
+	  display: none;
+	}
+  
+	// prevent product info text getting any bigger at bp-l
+	@include mq($bp-4) {
+	  p {
+		font-size: em(20);
+	  }
+	}
+  }
+  
+  // our custom product specs section
+  .summary.entry-summary .single-product-specs {
+	h2 {
+	  text-transform: uppercase;
+	  margin-top: 0.25em;
+	  margin-bottom: 0.25em;
+	  font-size: em(18);
+	  @include mq($bp-4) {
+		font-size: em(20);
+	  }
+	}
+	@include mq($bp-4) {
+	  p {
+		font-size: em(18);
+	  }
+	}
+  }
+  
+  // meta (SKU, cats, tags)
+  .summary.entry-summary .product_meta {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	.sku_wrapper {
+	  display: block;
+	}
+	.posted_in {
+	  display: block;
+	}
+  
+	// prevent product info text getting any bigger at bp-l
+	@include mq($bp-4) {
+	  p {
+		font-size: em(20);
+	  }
+	}
+  }
+  
+  // remove bottom margin on main image
+  .woocommerce div.product div.images img {
+	margin-bottom: 0;
+  }
+  
+  // keep font size down in Related Products summary images
+  .products.related li.product a {
+	@include mq($bp-3) {
+	  font-size: em(18);
+	}
+  }

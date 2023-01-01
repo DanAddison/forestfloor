@@ -8,8 +8,6 @@
 
 <div class="gig-listing">
 	<h2 class="gig-listing__heading">Upcoming gigs</h2>
-
-	<ul class="gig-listing__inner">
 		
 		<?php
 		$today = current_time('Y-m-d');
@@ -28,20 +26,23 @@
 			'order'                  => 'ASC'
 		);
 
-
-		// The Query
 		$gigs_query = new WP_Query( $args );
 
 		// The Loop
-		while ( $gigs_query->have_posts() ) {
-			$gigs_query->the_post();
+		if ( $gigs_query->have_posts() ) { ?>
+			
+			<ul class="gig-listing__inner">
 
-			$post_id = get_the_id();
-			$venue = get_field('acf_venue', $post_id);
-			$date = get_field('acf_date', $post_id);
-			$date_formatted = date("D j F, g:i a", strtotime($date));
-			$image_id = get_field('acf_poster', $post_id);
-			$description = get_field('acf_description', $post_id);
+			<?php
+			while ( $gigs_query->have_posts() ) {
+				$gigs_query->the_post();
+
+				$post_id = get_the_id();
+				$venue = get_field('acf_venue', $post_id);
+				$date = get_field('acf_date', $post_id);
+				$date_formatted = date("D j F, g:i a", strtotime($date));
+				$image_id = get_field('acf_poster', $post_id);
+				$description = get_field('acf_description', $post_id);
 			?>
 
 			<li class="gig-listing__item">
@@ -73,11 +74,24 @@
 			</li>
 
 			<?php
+			} // endwhile
+			?>
+
+		</ul>
+
+		<?php
+		} else {
+		?>
+
+		<div class="gig-listing__empty-message">
+			<p>We have no confirmed bookings at the moment - please check back later!</p>
+		</div>
+		
+		<?php
 		}
 
 		// Restore original Post Data
 		wp_reset_postdata();
 		?>
 
-	</ul>
 </div>

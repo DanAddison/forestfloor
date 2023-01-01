@@ -16,15 +16,12 @@
 	&__item {// li
 		padding: 15px 20px;
 		border-bottom: 1px solid $grey-lightest;
-		// &:first-of-type {
-		// 	border-top: 1px solid $grey-lightest;
-		// }
 
 		&-header {
 			position: relative;
 			cursor: pointer;
 			padding-right: 2em;
-			color: $grey-darkest;
+			color: $copy;
 
 			&::after {
 				content: "";
@@ -119,6 +116,11 @@
 				transform: rotate(-45deg);
 			}
 		}
+	}
+
+	&__empty-message {
+		margin-top: 30px;
+		text-align: center;	
 	}
 }
   

@@ -52,7 +52,7 @@ First, sidebar widget stylings
 ## CTA widget
 *********************************************************/
 .widget_cta {
-  @include mq($bp-xl) {
+  @include mq($bp-5) {
     margin-top: $spacing * 3;
   }
 }
@@ -172,7 +172,7 @@ Footer widget stylings
 // 		padding: 2em 1em 0;
 // 	}
 
-// 	@include mq($bp-l) {
+// 	@include mq($bp-4) {
 //     padding: 2em 6em 0;
 // 	}
 
@@ -207,7 +207,7 @@ Footer widget stylings
 // 		margin-bottom: 0;
 // 	}
 
-// 	@include mq($bp-m) {
+// 	@include mq($bp-3) {
 // 		/* Use flex to create a responsive layout */
 // 		display: flex;
 // 		flex-direction: row;

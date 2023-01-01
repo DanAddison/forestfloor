@@ -12,7 +12,7 @@ p.has-regular-font-size {
 p.has-large-font-size {
   font-size: em(18);
 
-  // @include mq($bp-xl) {
+  // @include mq($bp-5) {
   //   font-size: em(20);
   // }
 }

@@ -110,6 +110,7 @@ body:not(.wp-admin){
 	p {
 		font-size: 1.125rem; //18px
 		margin-top: 0;
+		margin-bottom: 0.5em;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -135,7 +136,7 @@ body:not(.wp-admin){
 		display: inline-block;
 		height: 38px;
 		padding: 0 30px;
-		color: $black;
+		color: $copy;
 		text-align: center;
 		font-size: 12px;
 		font-weight: 600;
@@ -145,7 +146,7 @@ body:not(.wp-admin){
 		white-space: nowrap;
 		background-color: $white;
 		border-radius: 4px;
-		border: 1px solid $black;
+		border: 1px solid $copy;
 		cursor: pointer;
 		box-sizing: border-box;
 	}
@@ -159,9 +160,15 @@ body:not(.wp-admin){
 	input[type="submit"]:focus,
 	input[type="reset"]:focus,
 	input[type="button"]:focus {
-	color: $white;
-	// background-color: $black; // this will affect hamburger
-	border-color: $white;
+		color: $white;
+		// background-color: $black; // this will affect hamburger
+		border-color: $white;
+	}
+
+	/* Lists
+	–––––––––––––––––––––––––––––––––––––––––––––––––– */
+	ol, ul {
+		font-size: 1.125rem; //18px
 	}
 
 	/*********************************************************
@@ -183,58 +190,56 @@ body:not(.wp-admin){
 	input[type="datetime-local"],
 	input[type="color"],
 	textarea {
-	color: $copy;
-	border: 1px solid $copy;
-	border-radius: 3px;
-	padding: 3px;
+		color: $copy;
+		border: 1px solid $copy;
+		border-radius: 3px;
+		padding: 3px;
 
-	&:focus {
-		color: $primary;
-	}
+		&:focus {
+			color: $primary;
+		}
 	}
 
 	select {
-	border: 1px solid $copy;
+		border: 1px solid $copy;
 	}
 
 	textarea {
-	width: 100%;
+		width: 100%;
 	}
 
 	/* Code
 	–––––––––––––––––––––––––––––––––––––––––––––––––– */
 	code {
-	padding: 0.2em 0.5em;
-	margin: 0 0.2em;
-	font-size: 90%;
-	white-space: nowrap;
-	background: $grey;
-	border: 1px solid #e1e1e1;
-	border-radius: 4px;
+		padding: 0.2em 0.5em;
+		margin: 0 0.2em;
+		font-size: 90%;
+		white-space: nowrap;
+		background: $grey;
+		border: 1px solid #e1e1e1;
+		border-radius: 4px;
 	}
 	pre > code {
-	display: block;
-	padding: 1em 1.5em;
-	white-space: pre;
+		display: block;
+		padding: 1em 1.5em;
+		white-space: pre;
 	}
 
 	/* Tables
 	–––––––––––––––––––––––––––––––––––––––––––––––––– */
 	th,
 	td {
-	padding: 12px 15px;
-	text-align: left;
-	border-bottom: 1px solid $grey;
+		padding: 12px 15px;
+		text-align: left;
+		border-bottom: 1px solid $grey;
 	}
 	th:first-child,
 	td:first-child {
-	padding-left: 0;
+		padding-left: 0;
 	}
 	th:last-child,
 	td:last-child {
-	padding-right: 0;
+		padding-right: 0;
 	}
-
-
 
 }
