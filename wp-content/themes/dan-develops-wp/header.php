@@ -23,6 +23,8 @@
 
 <body <?php body_class(); ?>>
 
+<div class="paper-overlay"></div>
+
 <!-- for screen readers to not have to tab through all nav items etc -->
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dan-develops-wp' ); ?></a>
 
