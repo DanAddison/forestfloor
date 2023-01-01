@@ -16,6 +16,10 @@ body {
 	pointer-events: none;
 }
 
+#wpadminbar {
+	position: fixed;
+}
+
 main.main-content {
   padding-bottom: 2em;
   min-height: calc(100vh - 340px);
@@ -23,7 +27,8 @@ main.main-content {
 
 main.main-content > * {
   &:first-child:not(.alignfull):not(.hero) {
-    padding-top: 120px;
+    padding-top: 80px;
+	margin-top: 0;
   }
 }
 

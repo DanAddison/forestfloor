@@ -1,16 +1,7 @@
 .site-header {
 	z-index: 1;
-	background-color: $canvas-medium;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-
-	.logged-in.admin-bar & {
-		top: 32px;
-	}
 }
 
 .header__inner {
