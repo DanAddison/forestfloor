@@ -10,7 +10,7 @@ jQuery(document).ready( function($) {
 	var listingItemSelector = '.gig-listing__item';
 	var listingBody = '.gig-listing__item-content';
 	var toggleSelector = '.gig-listing__item-header';
-	var closeSelector = '.item-close';
+	var closeSelector = '.gig-listing__item-close';
 
 	$(toggleSelector).on('click', function() {
 		

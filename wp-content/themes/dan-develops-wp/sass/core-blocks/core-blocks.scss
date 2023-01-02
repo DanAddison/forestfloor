@@ -11,10 +11,6 @@ p.has-regular-font-size {
 
 p.has-large-font-size {
   font-size: em(18);
-
-  // @include mq($bp-5) {
-  //   font-size: em(20);
-  // }
 }
 
 /*********************************************************
@@ -34,17 +30,15 @@ p.has-large-font-size {
 *********************************************************/
 .wp-block-quote,
 .wp-block-quote.is-style-large {
-  padding: 0 2em;
-  border-left: 6px solid $primary;
-  margin: 2em 0;
-
-  @include mq($bp-3) {
-    margin-right: 5em;
-  }
-
-  p {
-    font-style: normal;
-    line-height: 1.45;
+	padding: 0 3em;
+	border-left: 6px solid $primary;
+	color: $primary;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	
+	p {
+		font-size: 1.25rem !important;
+		padding-right: 2em;
   }
 }
 
@@ -94,13 +88,6 @@ p.has-large-font-size {
 }
 
 /*********************************************************
-## Cover-image block
-*********************************************************/
-// .wp-block-cover {
-
-// }
-
-/*********************************************************
 ## Embed blocks
 *********************************************************/
 figure {
@@ -108,68 +95,16 @@ figure {
 }
 
 /*********************************************************
-## Table block
+## File block
 *********************************************************/
-.wp-block-table {
-  display: table;
+.wp-block-file {
 
-  &.is-style-regular td {
-    border: 1px solid $grey-lightest;
-  }
+	a {// text link
+		font-size: 1.5rem;
+	}
+
+	&__button {
+		@extend .button;
+	}
 }
 
-.wp-block-table th {
-  padding: 4px 4px;
-  text-align: left;
-}
-
-.wp-block-table td {
-  margin: 0;
-  padding: 0.5em 1em;
-}
-
-/*********************************************************
-## Separator block
-*********************************************************/
-.wp-block-separator {
-  margin: 2em auto;
-
-  @include mq($bp-2) {
-    margin: 4em auto;
-  }
-
-  &.is-style-default {
-    max-width: 300px;
-  }
-}
-
-/*********************************************************
-## Spacer block (extended options in editor.js)
-*********************************************************/
-.wp-block-spacer {
-  &.is-style-responsive-small {
-    height: 2em !important;
-  }
-
-  &.is-style-responsive-medium {
-    height: 4em !important;
-  }
-
-  &.is-style-responsive-large {
-    height: 6em !important;
-  }
-
-  @include mq($bp-3) {
-    &.is-style-responsive-small {
-      height: 4em !important;
-    }
-
-    &.is-style-responsive-medium {
-      height: 6em !important;
-    }
-
-    &.is-style-responsive-large {
-      height: 10em !important;
-    }
-  }
-}
