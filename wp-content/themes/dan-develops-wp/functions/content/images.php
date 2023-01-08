@@ -8,10 +8,10 @@ add_theme_support( 'post-thumbnails' );
 // Register image sizes and choose to crop (you can also pass parameters for where to crop from)
 function da_register_image_sizes() {
   // for hero block responsive bg images
-  add_image_size( 'hero_small', 600, 200, true );
-  add_image_size( 'hero_medium', 900, 300, true );
-  add_image_size( 'hero_large', 1500, 500, true );
-  add_image_size( 'hero_xlarge', 2100, 700, true );
+//   add_image_size( 'hero_small', 600, 200, true );
+//   add_image_size( 'hero_medium', 900, 300, true );
+//   add_image_size( 'hero_large', 1500, 500, true );
+//   add_image_size( 'hero_xlarge', 2100, 700, true );
 
   add_image_size( 'square', 700, 700, true );
  }

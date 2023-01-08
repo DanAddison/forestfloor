@@ -35,18 +35,6 @@ function da_register_blocks() {
 		));
 
 		acf_register_block_type(array(
-			'name'			  	  => 'breadcrumb',
-			'title'				    => __('Breadcrumb'),
-			'description'		  => __('A custom block for adding breadcrumb navigation.'),
-			'render_callback'	=> 'da_acf_block_render_callback',
-			'category'			  => 'da-blocks',
-			'mode'						=> 'edit',
-			'icon'            => array( 'background' => '#e0edee', 'src' => 'arrow-left-alt' ),
-			'keywords'			  => array( 'image', 'card', 'link' ),
-			'supports'        => array( 'align' => false ),
-		));
-
-		acf_register_block_type(array(
 			'name'			  	  => 'gig-listing',
 			'title'				    => __('Gig Listing'),
 			'description'		  => __('A custom block for displaying upcoming gigs.'),

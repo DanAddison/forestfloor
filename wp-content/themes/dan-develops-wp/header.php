@@ -25,7 +25,6 @@
 
 <div class="paper-overlay"></div>
 
-<!-- for screen readers to not have to tab through all nav items etc -->
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dan-develops-wp' ); ?></a>
 
 <?php do_action( 'da_before_site_header' ); ?>
@@ -34,11 +33,9 @@
 
 	<div class="header__inner container">
 
-		<?php // get_template_part( 'template-parts/side-navigation' ); ?>
 			
 		<a class="site-branding" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<h1 class="site-branding__title"><?php bloginfo( 'name' ); ?></h1>
-			<!-- <span class="site-branding__logo"></span> -->
 		</a><!-- .site-branding -->
 		
 		<div class="header-nav">

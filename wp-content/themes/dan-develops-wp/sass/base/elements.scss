@@ -134,8 +134,8 @@ body:not(.wp-admin){
 	input[type="reset"],
 	input[type="button"] {
 		display: inline-block;
-		height: 38px;
-		padding: 0 30px;
+		// height: 38px;
+		padding: 8px 30px;
 		color: $copy;
 		text-align: center;
 		font-size: 12px;
@@ -149,20 +149,6 @@ body:not(.wp-admin){
 		border: 1px solid $copy;
 		cursor: pointer;
 		box-sizing: border-box;
-	}
-
-	.button:hover,
-	input[type="submit"]:hover,
-	input[type="reset"]:hover,
-	input[type="button"]:hover,
-	.button:focus,
-	button:focus,
-	input[type="submit"]:focus,
-	input[type="reset"]:focus,
-	input[type="button"]:focus {
-		color: $white;
-		// background-color: $black; // this will affect hamburger
-		border-color: $white;
 	}
 
 	/* Lists
