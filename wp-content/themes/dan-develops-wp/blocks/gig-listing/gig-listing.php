@@ -18,7 +18,7 @@
 				array(
 					'key'       => 'acf_date',
 					'value'     => $today,
-					'compare'   => '>=',
+					'compare'   => '>',
 				),
 			),
 			'meta_key'               => 'acf_date',
