@@ -1,0 +1,36 @@
+.single-gig {// template body class
+
+	&__header {
+		margin-bottom: 30px;
+	}
+
+	&__date {
+		color: $grey;
+		line-height: 1;	
+		font-size: 1.1rem;
+	}
+
+	&__content {
+		margin-bottom: 40px;
+		
+		@include mq($bp-2) {
+			display: flex;
+		}
+		
+		img {
+			height: fit-content;
+			@include mq($bp-2) {
+				flex: 0 0 300px;
+				margin-right: 40px;
+			}
+		}
+	}
+
+	&__description {
+		margin-top: 20px;
+		@include mq($bp-2) {
+			margin-top: 0;
+			padding-right: 20px;
+		}
+	}
+}

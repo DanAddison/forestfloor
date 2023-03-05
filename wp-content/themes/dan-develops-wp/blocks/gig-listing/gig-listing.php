@@ -2,8 +2,6 @@
 /**
  * Block Name: Gig Listing
  */
-
- // TODO: give this accordion functionality
 ?>
 
 <div class="gig-listing">
