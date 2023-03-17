@@ -71,7 +71,7 @@
 			}
 
 			img {
-				height: fit-content;
+				height: auto;
 				@include mq($bp-2) {
 					flex: 0 0 300px;
 					margin-right: 40px;
