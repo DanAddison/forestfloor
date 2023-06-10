@@ -24,10 +24,10 @@
 
 
 // remove short description meta box
-function remove_short_description() {
-	remove_meta_box( 'postexcerpt', 'product', 'normal');
-}
-add_action('add_meta_boxes', 'remove_short_description', 999);
+// function remove_short_description() {
+// 	remove_meta_box( 'postexcerpt', 'product', 'normal');
+// }
+// add_action('add_meta_boxes', 'remove_short_description', 999);
 
 /**
  * remove add to cart button on product archives
