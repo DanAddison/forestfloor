@@ -149,22 +149,22 @@ li.product a {
 /*********************************************************
 ## Buttons
 *********************************************************/
-// .woocommerce a.button {
-//   &:hover,
-//   &:focus {
-//     background-color: var(--action-hover);
-//   }
-// }
+.woocommerce a.button {
+  &:hover,
+  &:focus {
+    background-color: $primary;
+  }
+}
 
-// .woocommerce a.button.alt,
-// .woocommerce button.button.alt {
-// 	background-color: var(--action-color);
+.woocommerce a.button.alt,
+.woocommerce button.button.alt {
+	background-color: $primary;
 
-// 	&:hover,
-// 	&:focus {
-// 		background-color: var(--action-hover);
-// 	}
-// }
+	&:hover,
+	&:focus {
+		background-color: $grey-darkest;
+	}
+}
 
 /*********************************************************
 ## Checkout
